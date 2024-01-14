@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 // Components
 import NotesContainer from "./components/NotesContainer";
 import Welcome from "./components/Welcome/";
+import { notesSchema } from "./models/notes";
 
 function App() {
   //states
   const [username, setUsername] = useState("");
   const [isUser, setIsUser] = useState(false);
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState([] as notesSchema);
 
   //useEfect
   useEffect(() => {
@@ -25,7 +26,6 @@ function App() {
     return (
       <NotesContainer
         username={username}
-        isUser={isUser}
         setIsUser={setIsUser}
         notes={notes}
       ></NotesContainer>
