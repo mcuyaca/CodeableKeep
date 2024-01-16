@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // Components
 import NotesContainer from "./components/NotesContainer";
 import Welcome from "./components/Welcome/";
-import { notesSchema } from "./models/notes";
+import { notesSchema } from "./models/types";
 
 function App() {
   //states

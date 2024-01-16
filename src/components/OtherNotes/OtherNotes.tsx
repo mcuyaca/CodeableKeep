@@ -1,12 +1,11 @@
-import { notesSchema } from "../../models/notes";
+import { OtherNotesProps } from "../../models/types";
 import Note from "../Note";
 
-type props = {
-  setCurrentNotes: React.Dispatch<React.SetStateAction<notesSchema>>;
-  currentNotes: notesSchema;
-  username: string;
-};
-function OtherNotes({ setCurrentNotes, currentNotes, username }: props) {
+function OtherNotes({
+  setCurrentNotes,
+  currentNotes,
+  username,
+}: OtherNotesProps) {
   const orderNotes = [...currentNotes].reverse();
   return (
     <>

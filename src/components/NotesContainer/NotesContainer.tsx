@@ -6,13 +6,7 @@ import TrashNotes from "../TrashNotes";
 import Header from "../Header";
 import OtherNotes from "../OtherNotes";
 import Message from "../Message";
-import { notesSchema } from "../../models/notes";
-
-interface NotesContainerProps {
-  username: string;
-  notes: notesSchema;
-  setIsUser: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { NotesContainerProps } from "../../models/types";
 
 function NotesContainer(props: NotesContainerProps) {
   const { username, notes, setIsUser } = props;

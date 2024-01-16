@@ -1,8 +1,6 @@
-type props = {
-  page: string;
-  setPage: React.Dispatch<React.SetStateAction<string>>;
-};
-function Aside({ page, setPage }: props) {
+import { AsideProps } from "../../models/types";
+
+function Aside({ page, setPage }: AsideProps) {
   const classFocus = `bg-[#E5E5E5] rounded-r-[25px]`;
   const classPage =
     "text-lg pl-5 pr-auto h-[48px] gap-5 flex flex-row justify-start items-center";

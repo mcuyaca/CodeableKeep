@@ -1,15 +1,9 @@
 import { SyntheticEvent, useState } from "react";
 import { useId } from "react";
 import ColorPicker from "../ColorPicker";
-import { notesSchema } from "../../models/notes";
+import { NotesFormProps } from "../../models/types";
 
-type props = {
-  url: string;
-  setCurrentNotes: React.Dispatch<React.SetStateAction<notesSchema>>;
-  username: string;
-};
-
-function NotesForm({ url, setCurrentNotes, username }: props) {
+function NotesForm({ url, setCurrentNotes, username }: NotesFormProps) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [pinned, setPinned] = useState(false);

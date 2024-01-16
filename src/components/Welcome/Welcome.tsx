@@ -1,13 +1,6 @@
-import { notesSchema } from "../../models/notes";
+import { WelcomeProps } from "../../models/types";
 
-type props = {
-  username: string;
-  setUsername: React.Dispatch<React.SetStateAction<string>>;
-  setIsUser: React.Dispatch<React.SetStateAction<boolean>>;
-  setNotes: React.Dispatch<React.SetStateAction<notesSchema>>;
-};
-
-function Welcome(props: props) {
+function Welcome(props: WelcomeProps) {
   const { username, setUsername, setIsUser, setNotes } = props;
 
   if (username === null) {
