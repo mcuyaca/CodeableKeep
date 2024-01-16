@@ -1,9 +1,6 @@
-type props = {
-  username: string;
-  setIsUser: React.Dispatch<React.SetStateAction<boolean>>;
-};
+import { HeadersProps } from "../../models/types";
 
-function Header(props: props) {
+function Header(props: HeadersProps) {
   console.log("me ejecuto 1 vez Header ");
   const { username, setIsUser } = props;
   return (

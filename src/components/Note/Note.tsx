@@ -1,20 +1,8 @@
 import { SyntheticEvent, useState } from "react";
 import ColorPicker from "../ColorPicker";
-import { notesSchema } from "../../models/notes";
+import { NoteProps } from "../../models/types";
 
-type params = {
-  setCurrentNotes: React.Dispatch<React.SetStateAction<notesSchema>>;
-  data: {
-    title: string;
-    body: string;
-    color: string;
-    id: string;
-    pinned: boolean;
-    deleted: boolean;
-  };
-  username: string;
-};
-function Note({ setCurrentNotes, data, username }: params) {
+function Note({ setCurrentNotes, data, username }: NoteProps) {
   const [title, setTitle] = useState(data.title);
   const [body, setBody] = useState(data.body);
   const [color, setColor] = useState(data.color);

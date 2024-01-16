@@ -1,14 +1,12 @@
-import { notesSchema } from "../../models/notes";
+import { ColorPickerProps } from "../../models/types";
 
-type props = {
-  setColor: React.Dispatch<React.SetStateAction<string>>;
-  url: string;
-  username: string;
-  setCurrentNotes: React.Dispatch<React.SetStateAction<notesSchema>>;
-  id: string;
-};
-
-function ColorPicker({ setColor, url, username, setCurrentNotes, id }: props) {
+function ColorPicker({
+  setColor,
+  url,
+  username,
+  setCurrentNotes,
+  id,
+}: ColorPickerProps) {
   const urlGet = `https://codeable-keep-api-production.up.railway.app/api/${username}/notes`;
 
   function handleUpdate() {
