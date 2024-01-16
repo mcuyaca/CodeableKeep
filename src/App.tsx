@@ -1,18 +1,16 @@
 import "./App.css";
-// Libraries
+
 import { useEffect, useState } from "react";
-// Components
+
 import NotesContainer from "./components/NotesContainer";
 import Welcome from "./components/Welcome/";
-import { notesSchema } from "./models/types";
+import { Note } from "./models/types";
 
 function App() {
-  //states
   const [username, setUsername] = useState("");
   const [isUser, setIsUser] = useState(false);
-  const [notes, setNotes] = useState([] as notesSchema);
+  const [notes, setNotes] = useState([] as Note[]);
 
-  //useEfect
   useEffect(() => {
     const storageIsuser = localStorage.getItem("isUser");
     setIsUser(storageIsuser === "true");
