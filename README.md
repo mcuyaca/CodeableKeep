@@ -1,30 +1,95 @@
-# React + TypeScript + Vite
+# KeepClone - Aplicación de Notas Inspirada en Google Keep
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Captura de pantalla de la aplicación](link_a_la_imagen.png)
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[!NOTE]
 
-## Expanding the ESLint configuration
+> KeepClone es una Single Page Application (SPA) diseñada para la gestión de notas, inspirada en la popular aplicación Google Keep. La aplicación permite a los usuarios crear, editar, organizar y eliminar notas de una manera intuitiva y eficiente.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Funcionalidades Principales
 
-- Configure the top-level `parserOptions` property like this:
+[!TIP]
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+> **Autenticación de Usuario:**
+>
+> - Inicio de sesión con nombre de usuario.
+> - Persistencia de sesión para acceso directo a la vista principal.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[!TIP]
+
+> **Gestión de Notas:**
+>
+> - Creación, edición y eliminación de notas.
+> - Asignación de colores personalizados a las notas.
+> - Visualización de notas agrupadas por fecha de creación.
+
+[!TIP]
+
+> **Interfaz Amigable:**
+>
+> - Mensajes informativos cuando no hay notas.
+> - Barra lateral con enlaces a vistas principales y de basura.
+
+[!TIP]
+
+> **Eliminación y Recuperación:**
+>
+> - Papelera para notas eliminadas.
+> - Eliminación permanente y recuperación de notas desde la papelera.
+
+[!TIP]
+
+> **Personalización de Notas:**
+>
+> - Edición de contenido y títulos de notas.
+> - Fijación de notas para resaltarlas.
+
+## Capturas de Pantalla
+
+[!CAUTION]
+
+> Inserta aquí capturas de pantalla representativas de la aplicación.
+
+## Instalación
+
+[!IMPORTANT]
+
+> 1. Clona este repositorio: `git clone https://github.com/tuusuario/keepclone.git`
+> 2. Instala las dependencias: `npm install`
+> 3. Inicia la aplicación: `npm start`
+
+## Contribución
+
+[!IMPORTANT]
+
+> Si deseas contribuir a KeepClone, sigue estos pasos:
+>
+> 1. Crea un fork del repositorio.
+> 2. Crea tu rama de características: `git checkout -b feature/NuevaCaracteristica`
+> 3. Realiza tus cambios y haz commit: `git commit -m 'Añade NuevaCaracteristica'`
+> 4. Sube tus cambios: `git push origin feature/NuevaCaracteristica`
+> 5. Crea un Pull Request en GitHub.
+
+## Tecnologías Utilizadas
+
+[!NOTE]
+
+> - ReactJS
+> - HTML5, CSS3
+> - Otros...
+
+## Licencia
+
+[!TIP]
+
+> Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## Agradecimientos
+
+[!WARNING]
+
+> Agradecemos a todos los contribuidores que han hecho posible este proyecto. ¡Happy coding! 🚀
