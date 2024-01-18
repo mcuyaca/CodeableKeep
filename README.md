@@ -1,95 +1,71 @@
-# KeepClone - Aplicación de Notas Inspirada en Google Keep
+# Codeable Keep - Aplicación de Notas Inspirada en Google Keep
 
-![Captura de pantalla de la aplicación](link_a_la_imagen.png)
+![image](https://github.com/mcuyaca/CodeableKeep/assets/132428045/c2ad492b-470b-4a19-811a-0b5024d203d9)
 
 ## Descripción
 
-[!NOTE]
-
-> KeepClone es una Single Page Application (SPA) diseñada para la gestión de notas, inspirada en la popular aplicación Google Keep. La aplicación permite a los usuarios crear, editar, organizar y eliminar notas de una manera intuitiva y eficiente.
+Codeable Keep es una Single Page Application (SPA) diseñada para la gestión de notas, inspirada en la popular aplicación Google Keep. La aplicación permite a los usuarios crear, editar, organizar y eliminar notas de una manera intuitiva y eficiente.
 
 ## Funcionalidades Principales
 
-[!TIP]
+- **Autenticación de Usuario:**
 
-> **Autenticación de Usuario:**
->
-> - Inicio de sesión con nombre de usuario.
-> - Persistencia de sesión para acceso directo a la vista principal.
+  - Inicio de sesión con nombre de usuario.
+  - Persistencia de sesión para acceso directo a la vista principal.
 
-[!TIP]
+- **Gestión de Notas:**
 
-> **Gestión de Notas:**
->
-> - Creación, edición y eliminación de notas.
-> - Asignación de colores personalizados a las notas.
-> - Visualización de notas agrupadas por fecha de creación.
+  - Creación, edición y eliminación de notas.
+  - Asignación de colores personalizados a las notas.
+  - Visualización de notas agrupadas por fecha de creación.
 
-[!TIP]
+- **Interfaz Amigable:**
 
-> **Interfaz Amigable:**
->
-> - Mensajes informativos cuando no hay notas.
-> - Barra lateral con enlaces a vistas principales y de basura.
+  - Mensajes informativos cuando no hay notas.
+  - Barra lateral con enlaces a vistas principales y de basura.
 
-[!TIP]
+- **Eliminación y Recuperación:**
 
-> **Eliminación y Recuperación:**
->
-> - Papelera para notas eliminadas.
-> - Eliminación permanente y recuperación de notas desde la papelera.
+  - Papelera para notas eliminadas.
+  - Eliminación permanente y recuperación de notas desde la papelera.
 
-[!TIP]
-
-> **Personalización de Notas:**
->
-> - Edición de contenido y títulos de notas.
-> - Fijación de notas para resaltarlas.
+- **Personalización de Notas:**
+  - Edición de contenido y títulos de notas.
+  - Fijación de notas para resaltarlas.
 
 ## Capturas de Pantalla
 
-[!CAUTION]
-
-> Inserta aquí capturas de pantalla representativas de la aplicación.
+Inserta aquí capturas de pantalla representativas de la aplicación.
 
 ## Instalación
 
-[!IMPORTANT]
-
-> 1. Clona este repositorio: `git clone https://github.com/tuusuario/keepclone.git`
-> 2. Instala las dependencias: `npm install`
-> 3. Inicia la aplicación: `npm start`
+1. Clona este repositorio: `git clone https://github.com/tuusuario/CodeableKeep.git`
+2. Instala las dependencias: `npm install`
+3. Inicia la aplicación: `npm start`
 
 ## Contribución
 
-[!IMPORTANT]
+Si deseas contribuir a CodeableKeep, sigue estos pasos:
 
-> Si deseas contribuir a KeepClone, sigue estos pasos:
->
-> 1. Crea un fork del repositorio.
-> 2. Crea tu rama de características: `git checkout -b feature/NuevaCaracteristica`
-> 3. Realiza tus cambios y haz commit: `git commit -m 'Añade NuevaCaracteristica'`
-> 4. Sube tus cambios: `git push origin feature/NuevaCaracteristica`
-> 5. Crea un Pull Request en GitHub.
+1. Crea un fork del repositorio.
+2. Crea tu rama de características: `git checkout -b feature/NuevaCaracteristica`
+3. Realiza tus cambios y haz commit: `git commit -m 'Añade NuevaCaracteristica'`
+4. Sube tus cambios: `git push origin feature/NuevaCaracteristica`
+5. Crea un Pull Request en GitHub.
 
 ## Tecnologías Utilizadas
 
-[!NOTE]
-
-> - ReactJS
-> - HTML5, CSS3
-> - Otros...
+- ReactJS
+- HTML5, CSS3
+- Tailwind
+- Express
 
 ## Licencia
 
-[!TIP]
-
-> Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT. 
 
 ---
 
 ## Agradecimientos
 
-[!WARNING]
-
-> Agradecemos a todos los contribuidores que han hecho posible este proyecto. ¡Happy coding! 🚀
+Agradecemos a todos los contribuidores que han hecho posible este proyecto. ¡Happy coding! 🚀
