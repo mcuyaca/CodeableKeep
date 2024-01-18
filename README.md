@@ -1,6 +1,6 @@
 # Codeable Keep - Aplicación de Notas Inspirada en Google Keep
 
-![Captura de pantalla de la aplicación](link_a_la_imagen.png)
+![image](https://github.com/mcuyaca/CodeableKeep/assets/132428045/c2ad492b-470b-4a19-811a-0b5024d203d9)
 
 ## Descripción
 
@@ -62,7 +62,7 @@ Si deseas contribuir a CodeableKeep, sigue estos pasos:
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia MIT. 
 
 ---
 
