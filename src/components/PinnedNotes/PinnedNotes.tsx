@@ -1,11 +1,7 @@
 import { PinnedNotesProps } from "../../models/types";
 import Note from "../Note";
 
-function PinnedNotes({
-  setCurrentNotes,
-  currentNotes,
-  username,
-}: PinnedNotesProps) {
+function PinnedNotes({ setNotes, currentNotes, username }: PinnedNotesProps) {
   console.log("me ejecuto 1 vez PinnedNotes ");
   const orderNotes = [...currentNotes].reverse();
   return (
@@ -21,7 +17,7 @@ function PinnedNotes({
                   key={note.id}
                   data={note}
                   username={username}
-                  setCurrentNotes={setCurrentNotes}
+                  setNotes={setNotes}
                 />
               ),
           )}

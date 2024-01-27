@@ -1,11 +1,7 @@
 import { TrashNotesProps } from "../../models/types";
 import Note from "../Note";
 
-function TrashNotes({
-  setCurrentNotes,
-  currentNotes,
-  username,
-}: TrashNotesProps) {
+function TrashNotes({ setNotes, currentNotes, username }: TrashNotesProps) {
   const orderNotes = [...currentNotes].reverse();
   return (
     <>
@@ -19,7 +15,7 @@ function TrashNotes({
                   username={username}
                   key={note.id}
                   data={note}
-                  setCurrentNotes={setCurrentNotes}
+                  setNotes={setNotes}
                 />
               ),
           )}

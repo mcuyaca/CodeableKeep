@@ -16,7 +16,7 @@ export type ColorPickerProps = {
   setColor: React.Dispatch<React.SetStateAction<string>>;
   url: string;
   username: string;
-  setCurrentNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
   id: string;
 };
 
@@ -30,7 +30,7 @@ export type MessageProps = {
 };
 
 export type NoteProps = {
-  setCurrentNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
   data: Note;
   username: string;
 };
@@ -38,29 +38,30 @@ export type NoteProps = {
 export type NotesContainerProps = {
   username: string;
   notes: Note[];
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
   setIsUser: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export type NotesFormProps = {
   url: string;
-  setCurrentNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
   username: string;
 };
 
 export type OtherNotesProps = {
-  setCurrentNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
   currentNotes: Note[];
   username: string;
 };
 
 export type PinnedNotesProps = {
-  setCurrentNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
   currentNotes: Note[];
   username: string;
 };
 
 export type TrashNotesProps = {
-  setCurrentNotes: React.Dispatch<React.SetStateAction<Note[]>>;
+  setNotes: React.Dispatch<React.SetStateAction<Note[]>>;
   currentNotes: Note[];
   username: string;
 };

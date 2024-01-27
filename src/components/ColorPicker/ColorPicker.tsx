@@ -5,7 +5,7 @@ function ColorPicker({
   setColor,
   url,
   username,
-  setCurrentNotes,
+  setNotes,
   id,
 }: ColorPickerProps) {
   const urlGet = `${API_URL}/${username}/notes`;
@@ -14,7 +14,7 @@ function ColorPicker({
     console.log("Soy handleUpdate");
     fetch(urlGet)
       .then((response) => response.json())
-      .then((data) => setCurrentNotes(data.notes));
+      .then((data) => setNotes(data.notes));
 
     console.log("Me ejecuto 1 vez, soy runEffect en note");
   }

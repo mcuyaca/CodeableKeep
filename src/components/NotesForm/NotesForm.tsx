@@ -4,7 +4,7 @@ import ColorPicker from "../ColorPicker";
 import { NotesFormProps } from "../../models/types";
 import { API_URL } from "../../App";
 
-function NotesForm({ url, setCurrentNotes, username }: NotesFormProps) {
+function NotesForm({ url, setNotes, username }: NotesFormProps) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [pinned, setPinned] = useState(false);
@@ -58,7 +58,14 @@ function NotesForm({ url, setCurrentNotes, username }: NotesFormProps) {
     console.log("Soy handleUpdate");
     fetch(urlGet)
       .then((response) => response.json())
-      .then((data) => setCurrentNotes(data.notes));
+
+      .then((data) => {
+        console.log({ data });
+        setNotes(data.notes);
+        if (data.ok) {
+          localStorage.setItem("notes", JSON.stringify(data.notes));
+        }
+      });
     setColor("#FFF");
   }
 
@@ -82,11 +89,12 @@ function NotesForm({ url, setCurrentNotes, username }: NotesFormProps) {
 
     fetch(url, options)
       .then((response) => response.json())
+      .then(() => {
+        setTitle("");
+        setBody("");
+        setPinned(false);
+      })
       .then(() => handleUpdate());
-
-    setTitle("");
-    setBody("");
-    setPinned(false);
   }
 
   function handlerClickColor() {
@@ -124,7 +132,7 @@ function NotesForm({ url, setCurrentNotes, username }: NotesFormProps) {
               <ColorPicker
                 url=""
                 setColor={setColor}
-                setCurrentNotes={setCurrentNotes}
+                setNotes={setNotes}
                 username={username}
                 id={""}
               />

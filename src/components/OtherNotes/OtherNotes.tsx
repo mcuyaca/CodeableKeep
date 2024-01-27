@@ -1,11 +1,7 @@
 import { OtherNotesProps } from "../../models/types";
 import Note from "../Note";
 
-function OtherNotes({
-  setCurrentNotes,
-  currentNotes,
-  username,
-}: OtherNotesProps) {
+function OtherNotes({ setNotes, currentNotes, username }: OtherNotesProps) {
   const orderNotes = [...currentNotes].reverse();
   return (
     <>
@@ -20,7 +16,7 @@ function OtherNotes({
                   username={username}
                   key={note.id}
                   data={note}
-                  setCurrentNotes={setCurrentNotes}
+                  setNotes={setNotes}
                 />
               ),
           )}

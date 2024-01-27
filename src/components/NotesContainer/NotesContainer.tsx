@@ -10,8 +10,8 @@ import { NotesContainerProps } from "../../models/types";
 import { API_URL } from "../../App";
 
 function NotesContainer(props: NotesContainerProps) {
-  const { username, notes, setIsUser } = props;
-  const [currentNotes, setCurrentNotes] = useState(notes);
+  const { username, notes, setIsUser, setNotes } = props;
+
   const [page, setPage] = useState("notes");
   const url = `${API_URL}/${username}/notes`;
 
@@ -19,8 +19,8 @@ function NotesContainer(props: NotesContainerProps) {
     console.log("Haciendo el fetch inicial");
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setCurrentNotes(data.notes));
-  }, [url]);
+      .then((data) => setNotes(data.notes));
+  }, [url, setNotes]);
 
   return (
     <>
@@ -29,32 +29,31 @@ function NotesContainer(props: NotesContainerProps) {
         <Aside page={page} setPage={setPage} />
         <div className="mx-auto flex flex-col items-center justify-start gap-12 px-4 py-12">
           {page === "notes" && (
-            <NotesForm
-              url={url}
-              setCurrentNotes={setCurrentNotes}
-              username={username}
-            />
+            <NotesForm url={url} setNotes={setNotes} username={username} />
           )}
           <div className="flex flex-col items-center justify-center gap-4">
-            {notes.length === 0 && <Message message={"NO NOTES"}></Message>}
-            {notes.length !== 0 && page === "notes" && (
-              <>
-                <PinnedNotes
-                  currentNotes={currentNotes}
-                  setCurrentNotes={setCurrentNotes}
-                  username={username}
-                />
-                <OtherNotes
-                  currentNotes={currentNotes}
-                  setCurrentNotes={setCurrentNotes}
-                  username={username}
-                />
-              </>
+            {notes.length === 0 ? (
+              <Message message={"NO NOTES"} />
+            ) : (
+              page === "notes" && (
+                <>
+                  <PinnedNotes
+                    currentNotes={notes}
+                    setNotes={setNotes}
+                    username={username}
+                  />
+                  <OtherNotes
+                    currentNotes={notes}
+                    setNotes={setNotes}
+                    username={username}
+                  />
+                </>
+              )
             )}
             {notes.length !== 0 && page === "trash" && (
               <TrashNotes
-                currentNotes={currentNotes}
-                setCurrentNotes={setCurrentNotes}
+                currentNotes={notes}
+                setNotes={setNotes}
                 username={username}
               />
             )}

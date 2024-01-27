@@ -3,7 +3,7 @@ import ColorPicker from "../ColorPicker";
 import { NoteProps } from "../../models/types";
 import { API_URL } from "../../App";
 
-function Note({ setCurrentNotes, data, username }: NoteProps) {
+function Note({ setNotes, data, username }: NoteProps) {
   const [title, setTitle] = useState(data.title);
   const [body, setBody] = useState(data.body);
   const [color, setColor] = useState(data.color);
@@ -152,7 +152,7 @@ function Note({ setCurrentNotes, data, username }: NoteProps) {
     console.log("Soy handleUpdate");
     fetch(urlGet)
       .then((response) => response.json())
-      .then((data) => setCurrentNotes(data.notes));
+      .then((data) => setNotes(data.notes));
 
     console.log("Me ejecuto 1 vez, soy runEffect en note");
   }
@@ -250,7 +250,7 @@ function Note({ setCurrentNotes, data, username }: NoteProps) {
                 setColor={setColor}
                 url={url}
                 username={username}
-                setCurrentNotes={setCurrentNotes}
+                setNotes={setNotes}
                 id={data.id}
               />
             )}
