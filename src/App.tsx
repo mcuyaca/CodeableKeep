@@ -6,6 +6,8 @@ import NotesContainer from "./components/NotesContainer";
 import Welcome from "./components/Welcome/";
 import { Note } from "./models/types";
 
+export const API_URL = `https://codeable-keep.cyclic.app/`;
+
 function App() {
   const [username, setUsername] = useState("");
   const [isUser, setIsUser] = useState(false);

@@ -2,6 +2,7 @@ import { SyntheticEvent, useState } from "react";
 import { useId } from "react";
 import ColorPicker from "../ColorPicker";
 import { NotesFormProps } from "../../models/types";
+import { API_URL } from "../../App";
 
 function NotesForm({ url, setCurrentNotes, username }: NotesFormProps) {
   const [title, setTitle] = useState("");
@@ -11,7 +12,7 @@ function NotesForm({ url, setCurrentNotes, username }: NotesFormProps) {
   const [color, setColor] = useState("#FFF");
   const titleId = useId();
 
-  const urlGet = `https://codeable-keep-api-production.up.railway.app/api/${username}/notes`;
+  const urlGet = `${API_URL}/${username}/notes`;
 
   const colorPickerForm = color === "#FFF" ? `bg-white` : `bg-[${color}]`;
   const classNote =
