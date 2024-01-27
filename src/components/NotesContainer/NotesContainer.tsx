@@ -7,12 +7,13 @@ import Header from "../Header";
 import OtherNotes from "../OtherNotes";
 import Message from "../Message";
 import { NotesContainerProps } from "../../models/types";
+import { API_URL } from "../../App";
 
 function NotesContainer(props: NotesContainerProps) {
   const { username, notes, setIsUser } = props;
   const [currentNotes, setCurrentNotes] = useState(notes);
   const [page, setPage] = useState("notes");
-  const url = `https://codeable-keep-api-production.up.railway.app/api/${username}/notes`;
+  const url = `${API_URL}/${username}/notes`;
 
   useEffect(() => {
     console.log("Haciendo el fetch inicial");

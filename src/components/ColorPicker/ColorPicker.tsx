@@ -1,3 +1,4 @@
+import { API_URL } from "../../App";
 import { ColorPickerProps } from "../../models/types";
 
 function ColorPicker({
@@ -7,7 +8,7 @@ function ColorPicker({
   setCurrentNotes,
   id,
 }: ColorPickerProps) {
-  const urlGet = `https://codeable-keep-api-production.up.railway.app/api/${username}/notes`;
+  const urlGet = `${API_URL}/${username}/notes`;
 
   function handleUpdate() {
     console.log("Soy handleUpdate");

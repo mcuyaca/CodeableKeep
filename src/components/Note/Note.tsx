@@ -1,6 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import ColorPicker from "../ColorPicker";
 import { NoteProps } from "../../models/types";
+import { API_URL } from "../../App";
 
 function Note({ setCurrentNotes, data, username }: NoteProps) {
   const [title, setTitle] = useState(data.title);
@@ -9,8 +10,8 @@ function Note({ setCurrentNotes, data, username }: NoteProps) {
   const [showColor, setShowColor] = useState(false);
   const [isEditable, setIsEditable] = useState(true);
 
-  const url = `https://codeable-keep-api-production.up.railway.app/api/${username}/notes/${data.id}`;
-  const urlGet = `https://codeable-keep-api-production.up.railway.app/api/${username}/notes`;
+  const url = `${API_URL}/${username}/notes/${data.id}`;
+  const urlGet = `${API_URL}/${username}/notes`;
   const colorNote = color === "#FFF" ? `bg-white` : `bg-[${color}]`;
   const classNote =
     "flex flex-col justify-between p-4 w-[252px] h-[226px] leading-5 tracking-[0.25px]   rounded-lg text-[#18181B]";

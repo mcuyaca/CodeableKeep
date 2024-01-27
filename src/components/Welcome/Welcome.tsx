@@ -1,3 +1,4 @@
+import { API_URL } from "../../App";
 import { WelcomeProps } from "../../models/types";
 
 function Welcome(props: WelcomeProps) {
@@ -8,15 +9,12 @@ function Welcome(props: WelcomeProps) {
   }
   const handleLogin = async () => {
     try {
-      const response = await fetch(
-        `https://codeable-keep-api-production.up.railway.app/api/${username}/notes`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
+      const response = await fetch(`${API_URL}/${username}/notes`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+      });
 
       if (response.ok) {
         const data = await response.json();
