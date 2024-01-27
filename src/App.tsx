@@ -6,7 +6,7 @@ import NotesContainer from "./components/NotesContainer";
 import Welcome from "./components/Welcome/";
 import { Note } from "./models/types";
 
-export const API_URL = `http://codeableapi.onrender.com/`;
+export const API_URL = `https://codeableapi.onrender.com/`;
 
 function App() {
   const [username, setUsername] = useState("");
