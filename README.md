@@ -33,13 +33,9 @@ Codeable Keep es una Single Page Application (SPA) diseñada para la gestión de
   - Edición de contenido y títulos de notas.
   - Fijación de notas para resaltarlas.
 
-## Capturas de Pantalla
-
-Inserta aquí capturas de pantalla representativas de la aplicación.
-
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/tuusuario/CodeableKeep.git`
+1. Clona este repositorio: `git clone https://github.com/mcuyaca/CodeableKeep.git`
 2. Instala las dependencias: `npm install`
 3. Inicia la aplicación: `npm start`
 
