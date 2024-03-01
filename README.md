@@ -1,6 +1,6 @@
 # Codeable Keep - Aplicación de Notas Inspirada en Google Keep
 
-![image](https://github.com/mcuyaca/CodeableKeep/assets/132428045/c2ad492b-470b-4a19-811a-0b5024d203d9)
+![799shots_so](https://github.com/mcuyaca/CodeableKeep/assets/132428045/bda428cc-e4c9-491c-a148-76c75f588f3a)
 
 ## Descripción
 
